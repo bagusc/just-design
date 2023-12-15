@@ -17,24 +17,48 @@
         android:layout_height="80dp"
         android:layout_marginTop="24dp"
         android:orientation="horizontal"
-        android:gravity="center"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="40px"
+        android:layout_marginStart="40px"
         android:weightSum="1">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/welcomeTitle"
+<!--        <com.google.android.material.textview.MaterialTextView-->
+<!--            android:id="@+id/welcomeTitle"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Hallo, Admin !"-->
+<!--            android:textAlignment="center"-->
+<!--            android:fontFamily="sans-serif-medium"-->
+<!--            android:textColor="@color/primaryText"-->
+<!--            android:textSize="28sp"-->
+<!--            android:textStyle="bold" />-->
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Hallo, Admin !"
-            android:textAlignment="center"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@color/primaryText"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            android:id="@+id/greetingText"
+            android:text="hello, "
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:fontFamily="@font/poppinsregular"
+/>
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10px"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Admin"
+            android:textColor="@color/colorPrimary"
+            android:textSize="23sp"
+            android:textStyle="italic" />
+
 
     </LinearLayout>
 
-    <com.google.android.material.card.MaterialCardView
+        <com.google.android.material.card.MaterialCardView
         android:id="@+id/bodyPanel"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -59,19 +83,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:onClick="openInputDataActivity"
-                android:backgroundTint="@color/primaryText"
+                android:backgroundTint="@color/white"
                 android:src="@drawable/ic_display_data" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/button_display_data"
-                android:text="Tampilkan Data"
+                android:text="Show All"
                 android:textAlignment="center"
-                android:textColor="@color/primaryText"
+                android:fontFamily="@font/poppinssemi"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
+
     </com.google.android.material.card.MaterialCardView>
     <LinearLayout
         android:layout_width="match_parent"
@@ -105,16 +131,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:onClick="openInputDataActivity"
-                    android:backgroundTint="@color/primaryText"
+                    android:backgroundTint="@color/white"
                     android:src="@drawable/ic_input_data" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/button_display_data"
-                    android:text="Input Data"
+                    android:text="Add New"
                     android:textAlignment="center"
-                    android:textColor="@color/primaryText"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -146,16 +172,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:onClick="openInputDataActivity"
-                android:backgroundTint="@color/primaryText"
+                android:backgroundTint="@color/white"
                 android:src="@drawable/ic_manipulate_data" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/button_display_data"
-                android:text="Manipulasi Data"
+                android:text="Manipulate"
                 android:textAlignment="center"
-                android:textColor="@color/primaryText"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
