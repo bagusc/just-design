@@ -13,7 +13,7 @@
         android:id="@+id/welcomeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello Again !"
+        android:text="Create New Account"
         android:textColor="@color/primaryText"
         android:textSize="50px"
         android:textStyle="bold"
@@ -26,7 +26,7 @@
         android:layout_below="@+id/welcomeTitle"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Welcome back you've been missed"
+        android:text="Please fill the forms to continue"
         android:textColor="@color/secondText"
         android:textSize="30px"
         android:textStyle="bold"
@@ -35,8 +35,9 @@
         android:fontFamily="@font/poppinsregular"
         />
 
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email"
+        android:id="@+id/fullname"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,10 +46,37 @@
         android:layout_marginEnd="40px"
         android:layout_marginBottom="30px"
         android:layout_marginStart="40px"
+        android:hint="Full Name"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_person"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputFullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/secondText"
+            android:fontFamily="@font/poppinsmedium"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fullname"
+        android:layout_marginEnd="40px"
+        android:layout_marginBottom="30px"
+        android:layout_marginStart="40px"
         android:hint="Email"
         app:endIconMode="clear_text"
         app:startIconDrawable="@drawable/ic_email"
-       >
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputEmail"
@@ -68,6 +96,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40px"
+        android:layout_marginBottom="40px"
         android:layout_marginStart="40px"
         android:layout_below="@+id/email"
         app:startIconDrawable="@drawable/ic_pass"
@@ -87,21 +116,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/recoveryPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/password"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="20px"
-        android:layout_marginEnd="40px"
-        android:layout_marginBottom="40px"
-        android:textStyle="bold"
-        android:textColor="@color/secondText"
-        android:fontFamily="@font/poppinsmedium"
-        android:text="Recovery Password"
-        android:clickable="true"
-        android:onClick="onRegClick" />
 
     <Button
         android:id="@+id/loginButton"
@@ -114,8 +128,8 @@
         android:layout_marginStart="40px"
         android:width="300dp"
         android:background="@drawable/shape"
-        android:text="LOGIN"
-        android:layout_below="@+id/recoveryPassword"
+        android:text="REGISTER"
+        android:layout_below="@+id/password"
         android:textColor="@color/white"
         android:fontFamily="@font/poppinssemi"/>
 
@@ -123,7 +137,7 @@
         android:id="@+id/connect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Or continue with"
+        android:text="Register with"
         android:textColor="@color/secondText"
         android:fontFamily="@font/poppinsmedium"
         android:layout_below="@+id/loginButton"
@@ -133,45 +147,45 @@
         android:layout_marginStart="40px"
         />
 
-<LinearLayout
-    android:id="@+id/socmed"
-    android:layout_below="@+id/connect"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center_horizontal"
-    android:layout_marginTop="40px"
-    android:layout_marginEnd="40px"
-    android:layout_marginBottom="40px"
-    android:layout_marginStart="40px">
-    <ImageButton
-        android:id="@+id/google"
-        android:layout_width="48dp"
-        android:layout_height="51dp"
-        android:background="@drawable/shape"
-        android:contentDescription="A tiny Android icon"
-        android:padding="10dp"
-        android:layout_marginHorizontal="10dp"
-        android:src="@drawable/ic_google" />
-    <ImageButton
-        android:id="@+id/apple"
-        android:layout_width="48dp"
-        android:layout_height="51dp"
-        android:background="@drawable/shape"
-        android:contentDescription="A tiny Android icon"
-        android:padding="10dp"
-        android:layout_marginHorizontal="10dp"
-        android:src="@drawable/ic_apple" />
-    <ImageButton
-        android:id="@+id/facebook"
-        android:layout_width="48dp"
-        android:layout_height="51dp"
-        android:background="@drawable/shape"
-        android:contentDescription="A tiny Android icon"
-        android:padding="10dp"
-        android:layout_marginHorizontal="10dp"
-        android:src="@drawable/ic_facebook" />
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/socmed"
+        android:layout_below="@+id/connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="40px"
+        android:layout_marginEnd="40px"
+        android:layout_marginBottom="40px"
+        android:layout_marginStart="40px">
+        <ImageButton
+            android:id="@+id/google"
+            android:layout_width="48dp"
+            android:layout_height="51dp"
+            android:background="@drawable/shape"
+            android:contentDescription="A tiny Android icon"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/ic_google" />
+        <ImageButton
+            android:id="@+id/apple"
+            android:layout_width="48dp"
+            android:layout_height="51dp"
+            android:background="@drawable/shape"
+            android:contentDescription="A tiny Android icon"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/ic_apple" />
+        <ImageButton
+            android:id="@+id/facebook"
+            android:layout_width="48dp"
+            android:layout_height="51dp"
+            android:background="@drawable/shape"
+            android:contentDescription="A tiny Android icon"
+            android:padding="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/ic_facebook" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/reg"
@@ -189,22 +203,22 @@
             android:id="@+id/notMember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Don't have an account? "
+            android:text="Already have an account ? "
             android:textColor="@color/secondText"
             android:fontFamily="@font/poppinsmedium"
             android:layout_centerHorizontal="true"
             />
 
         <TextView
-            android:id="@+id/register"
+            android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register Now"
+            android:text="Login"
             android:textStyle="bold"
             android:textColor="@color/clickText"
             android:fontFamily="@font/poppinsmedium"
             android:clickable="true"
-            android:onClick="onRegClick" />
+            android:onClick="onLogClick" />
     </LinearLayout>
 
 </RelativeLayout>
