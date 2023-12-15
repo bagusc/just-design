@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="background">#EDEDF5</color>
+    <color name="background">#ECECF4</color>
     <color name="colorPrimary">#F95E40</color>
     <color name="white">#FFFFFF</color>
-    <color name="grey">#636363</color>
+    <color name="primaryText">#0B0B0B</color>
+    <color name="secondText">#676767</color>
+    <color name="clickText">#70A5EF</color>
+
 
 </resources>

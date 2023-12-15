@@ -7,27 +7,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register);
 
-        TextView myClickableText = findViewById(R.id.register);
+        TextView myClickableText = findViewById(R.id.login);
         myClickableText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onRegClick(v);
+                onLogClick(v);
             }
         });
     }
 
     // Metode yang akan dipanggil saat teks diklik
-    public void onRegClick(View view) {
+    public void onLogClick(View view) {
         // Tambahkan logika yang ingin Anda lakukan saat teks diklik di sini
         // Misalnya, tampilkan pesan atau navigasi ke aktivitas lain
-        Intent intent = new Intent( MainActivity.this, RegisterActivity.class);
+        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
         startActivity(intent);
     }
 }
