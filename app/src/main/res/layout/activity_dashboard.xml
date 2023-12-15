@@ -28,7 +28,7 @@
             android:text="Hallo, Admin !"
             android:textAlignment="center"
             android:fontFamily="sans-serif-medium"
-            android:textColor="@color/darkgrey"
+            android:textColor="@color/primaryText"
             android:textSize="28sp"
             android:textStyle="bold" />
 
@@ -59,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:onClick="openInputDataActivity"
-                android:backgroundTint="@color/darkgrey"
+                android:backgroundTint="@color/primaryText"
                 android:src="@drawable/ic_display_data" />
 
             <TextView
@@ -68,7 +68,7 @@
                 android:layout_below="@id/button_display_data"
                 android:text="Tampilkan Data"
                 android:textAlignment="center"
-                android:textColor="@color/darkgrey"
+                android:textColor="@color/primaryText"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -105,7 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:onClick="openInputDataActivity"
-                    android:backgroundTint="@color/darkgrey"
+                    android:backgroundTint="@color/primaryText"
                     android:src="@drawable/ic_input_data" />
 
                 <TextView
@@ -114,8 +114,8 @@
                     android:layout_below="@id/button_display_data"
                     android:text="Input Data"
                     android:textAlignment="center"
-                    android:textColor="@color/darkgrey"
-                    android:textSize="20sp"
+                    android:textColor="@color/primaryText"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -146,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:onClick="openInputDataActivity"
-                android:backgroundTint="@color/darkgrey"
+                android:backgroundTint="@color/primaryText"
                 android:src="@drawable/ic_manipulate_data" />
 
             <TextView
@@ -155,8 +155,8 @@
                 android:layout_below="@id/button_display_data"
                 android:text="Manipulasi Data"
                 android:textAlignment="center"
-                android:textColor="@color/darkgrey"
-                android:textSize="20sp"
+                android:textColor="@color/primaryText"
+                android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
