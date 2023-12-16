@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -16,6 +18,20 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         TextView greetingText = findViewById(R.id.greetingText);
+        LinearLayout showAll = findViewById(R.id.showAll);
+
+        showAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Buat Intent untuk memulai aktivitas tujuan
+                Intent intent = new Intent(DashboardActivity.this, DisplayDataActivity.class);
+
+                // Mulai aktivitas tujuan
+                startActivity(intent);
+
+            }
+        });
 
         // Mendapatkan waktu saat ini
         Calendar calendar = Calendar.getInstance();
@@ -38,10 +54,10 @@ public class DashboardActivity extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 //
-    public void openDisplayDataActivity(View view) {
-        Intent intent = new Intent(this, DisplayDataActivity.class);
-        startActivity(intent);
-    }
+//    public void openDisplayDataActivity(View view) {
+//        Intent intent = new Intent(this, DisplayDataActivity.class);
+//        startActivity(intent);
+//    }
 
 //    public void openManipulateDataActivity(View view) {
 //        Intent intent = new Intent(this, ManipulateDataActivity.class);
