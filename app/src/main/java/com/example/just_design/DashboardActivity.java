@@ -38,10 +38,10 @@ public class DashboardActivity extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 //
-//    public void openDisplayDataActivity(View view) {
-//        Intent intent = new Intent(this, DisplayDataActivity.class);
-//        startActivity(intent);
-//    }
+    public void openDisplayDataActivity(View view) {
+        Intent intent = new Intent(this, DisplayDataActivity.class);
+        startActivity(intent);
+    }
 
 //    public void openManipulateDataActivity(View view) {
 //        Intent intent = new Intent(this, ManipulateDataActivity.class);
