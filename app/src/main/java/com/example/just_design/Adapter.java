@@ -20,13 +20,13 @@ import org.jetbrains.annotations.NotNull;
 import java.time.Instant;
 import java.util.List;
 
-public class AdapterPerson extends RecyclerView.Adapter<AdapterPerson.PersonViewHolder> {
+public class Adapter extends RecyclerView.Adapter<Adapter.PersonViewHolder> {
 
     private final Context context;
     private final List<Item> itemList;
     private final RvItemClick rvItemClick;
 
-    public AdapterPerson(Context context, List<Item> itemList, RvItemClick rvItemClick) {
+    public Adapter(Context context, List<Item> itemList, RvItemClick rvItemClick) {
         this.context = context;
         this.itemList = itemList;
         this.rvItemClick = rvItemClick;
@@ -41,7 +41,7 @@ public class AdapterPerson extends RecyclerView.Adapter<AdapterPerson.PersonView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull @NotNull AdapterPerson.PersonViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull @NotNull Adapter.PersonViewHolder holder, int position) {
         holder.bindData(itemList.get(position));
     }
 

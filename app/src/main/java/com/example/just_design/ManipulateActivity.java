@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -19,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.just_design.AdapterPerson;
+import com.example.just_design.Adapter;
 import com.example.just_design.RvItemClick;
 import com.example.just_design.Item;
 import com.example.just_design.R;
@@ -29,7 +30,7 @@ public class ManipulateActivity extends AppCompatActivity implements RvItemClick
 
     private ActivityManipulateBinding binding; // Gunakan binding
     private List<Item> itemList;
-    private AdapterPerson adapter;
+    private Adapter adapter;
     private Handler handler;
 
     @Override
@@ -39,16 +40,29 @@ public class ManipulateActivity extends AppCompatActivity implements RvItemClick
         binding = ActivityManipulateBinding.inflate(getLayoutInflater()); // Gunakan inflate dari binding
         setContentView(binding.getRoot());
 
+        TextView backBtn = findViewById(R.id.backBtn);
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         itemList = new ArrayList<>();
         handler = new Handler();
 
-        itemList.add(new Item("Nike Pro", R.drawable.sepatu1));
+        itemList.add(new Item("Nike Waffle Debut\n", R.drawable.waffle));
+        itemList.add(new Item("Nike Revolution 6\n", R.drawable.img));
+        itemList.add(new Item("Air Jordan 1 Elevate Low SE\n", R.drawable.img_1));
+        itemList.add(new Item("Nike Air More Uptempo '96\n", R.drawable.img_2));
+
+
 
         binding.rvMain.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         binding.rvMain.setLayoutManager(linearLayoutManager);
-        adapter = new AdapterPerson(this, itemList, this);
+        adapter = new Adapter(this, itemList, this);
         binding.rvMain.setAdapter(adapter);
 
         binding.rvMain.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -85,11 +99,15 @@ public class ManipulateActivity extends AppCompatActivity implements RvItemClick
         int itemId = menuItem.getItemId();
 
         if (itemId == R.id.edit) {
-            Toast.makeText(this, item.getName(), Toast.LENGTH_SHORT).show();
+            navigateToEditPage();
         } else if (itemId == R.id.delete) {
-            Toast.makeText(this, item.getName(), Toast.LENGTH_SHORT).show();
-
+            Toast.makeText(this, "Berhasil dihapus", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void navigateToEditPage() {
+        Intent intent = new Intent(ManipulateActivity.this, EditPage.class);
+        startActivity(intent);
     }
 
 }

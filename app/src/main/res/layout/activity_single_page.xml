@@ -13,11 +13,29 @@
         <ImageView
             android:id="@+id/imgShow"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@drawable/sepatu1"
+            android:layout_height="300dp"
+            android:src="@drawable/waffle"
             android:scaleType="centerCrop"
             android:adjustViewBounds="true"
-            android:padding="15dp"/>
+        />
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_toRightOf="@+id/backBtn"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="250dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Price:    80"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppinsbold"/>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/backBtn"
@@ -31,8 +49,6 @@
             android:layout_marginLeft="10dp"/>
 
 
-
-
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
@@ -40,19 +56,39 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/poppinsbold"
-            android:text="Nike Pro"
+            android:text="Nike Waffle Debut"
             android:layout_below="@id/imgShow"
             android:textSize="25dp"/>
 
             <TextView
-                android:id="@+id/details"
+                android:id="@+id/merk"
                 android:layout_below="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:text="Description"
-
+                android:text="Merk  : Nike"
                 />
+
+        <TextView
+            android:id="@+id/stock"
+            android:layout_toRightOf="@+id/merk"
+            android:layout_below="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Stock  : 30 pcs"
+            />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/merk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="Retro gets modernised in the Nike Waffle Debut. Remember that smooth suede and nylon trend? It's back, along with the modernised 'wedge' midsole that feels incredibly plush. And to top it off, we've kept the classic on the bottom—the tried, true and trusted Waffle outsole—that adds traction, durability and heritage style to your step."
+            />
 
     </RelativeLayout>
 

@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class InputActivity extends AppCompatActivity {
+public class EditPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_input);
+        setContentView(R.layout.activity_edit_page);
 
         TextView backBtn = findViewById(R.id.backBtn);
 
@@ -21,6 +21,5 @@ public class InputActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }

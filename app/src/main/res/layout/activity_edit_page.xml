@@ -29,7 +29,7 @@
             android:id="@+id/welcomeTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ADD NEW"
+            android:text="EDIT PAGE"
             android:textColor="@color/primaryText"
             android:textSize="50px"
             android:textStyle="bold"
@@ -43,7 +43,7 @@
             android:id="@+id/addImage"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:src="@drawable/add_image"
+            android:src="@drawable/waffle"
             android:layout_below="@+id/welcomeTitle"
             />
 
@@ -71,7 +71,7 @@
                 android:backgroundTint="@color/white"
                 android:textColor="@color/secondText"
                 android:fontFamily="@font/poppinsmedium"
-
+                android:text="Nike Waffle Debut"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -96,6 +96,7 @@
                 android:backgroundTint="@color/white"
                 android:textColor="@color/secondText"
                 android:fontFamily="@font/poppinsmedium"
+                android:text="Nike"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -122,6 +123,7 @@
                 android:textColor="@color/secondText"
                 android:fontFamily="@font/poppinsmedium"
                 android:inputType="number"
+                android:text="80"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -147,6 +149,7 @@
                 android:textColor="@color/secondText"
                 android:fontFamily="@font/poppinsmedium"
                 android:inputType="number"
+                android:text="30"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -168,11 +171,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:gravity="left"
-
                 android:background="@drawable/shape"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/secondText"
                 android:fontFamily="@font/poppinsmedium"
+                android:text="Retro gets modernised in the Nike Waffle Debut. Remember that smooth suede and nylon trend? It's back, along with the modernised 'wedge' midsole that feels incredibly plush. And to top it off, we've kept the classic on the bottom—the tried, true and trusted Waffle outsole—that adds traction, durability and heritage style to your step."
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -189,7 +192,7 @@
             android:layout_marginStart="40px"
             android:width="300dp"
             android:background="@drawable/shape"
-            android:text="ADD PRODUCT"
+            android:text="SAVE"
             android:layout_below="@+id/desc"
             android:textColor="@color/white"
             android:fontFamily="@font/poppinssemi"/>
