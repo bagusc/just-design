@@ -18,18 +18,31 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         TextView greetingText = findViewById(R.id.greetingText);
+        LinearLayout manipulate = findViewById(R.id.manipulate);
         LinearLayout showAll = findViewById(R.id.showAll);
+        LinearLayout addNew = findViewById(R.id.addNew);
 
         showAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                // Buat Intent untuk memulai aktivitas tujuan
                 Intent intent = new Intent(DashboardActivity.this, DisplayDataActivity.class);
-
-                // Mulai aktivitas tujuan
                 startActivity(intent);
+            }
+        });
 
+        addNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, InputActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        manipulate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, ManipulateActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -48,19 +61,4 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
 
-
-//    public void openInputDataActivity(View view) {
-//        Intent intent = new Intent(this, InputDataActivity.class);
-//        startActivity(intent);
-//    }
-//
-//    public void openDisplayDataActivity(View view) {
-//        Intent intent = new Intent(this, DisplayDataActivity.class);
-//        startActivity(intent);
-//    }
-
-//    public void openManipulateDataActivity(View view) {
-//        Intent intent = new Intent(this, ManipulateDataActivity.class);
-//        startActivity(intent);
-//    }
 }

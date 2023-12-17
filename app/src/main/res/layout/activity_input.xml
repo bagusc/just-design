@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".InputActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        >
+
+        <TextView
+            android:layout_marginTop="50dp"
+            android:id="@+id/welcomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD NEW"
+            android:textColor="@color/primaryText"
+            android:textSize="50px"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppinsregular"
+            />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fullname"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/welcomeTitle"
+            android:layout_marginTop="40px"
+            android:layout_marginEnd="40px"
+            android:layout_marginBottom="30px"
+            android:layout_marginStart="40px"
+            android:hint="Product Name"
+            app:endIconMode="clear_text"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/secondText"
+                android:fontFamily="@font/poppinsmedium"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/merk"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fullname"
+            android:layout_marginEnd="40px"
+            android:layout_marginBottom="30px"
+            android:layout_marginStart="40px"
+            android:hint="Merk"
+            app:endIconMode="clear_text"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputMerk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/secondText"
+                android:fontFamily="@font/poppinsmedium"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/stok"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/merk"
+            android:layout_marginEnd="40px"
+            android:layout_marginBottom="30px"
+            android:layout_marginStart="40px"
+            android:hint="Stock"
+            app:endIconMode="clear_text"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/secondText"
+                android:fontFamily="@font/poppinsmedium"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/desc"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stok"
+            android:layout_marginEnd="40px"
+            android:layout_marginBottom="30px"
+            android:layout_marginStart="40px"
+            android:hint="Description"
+            app:endIconMode="clear_text"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputDesc"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="left"
+
+                android:background="@drawable/shape"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/secondText"
+                android:fontFamily="@font/poppinsmedium"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40px"
+            android:layout_marginEnd="40px"
+            android:layout_marginBottom="40px"
+            android:layout_marginStart="40px"
+            android:width="300dp"
+            android:background="@drawable/shape"
+            android:text="ADD PRODUCT"
+            android:layout_below="@+id/desc"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppinssemi"/>
+
+
+
+    </RelativeLayout>
+</ScrollView>

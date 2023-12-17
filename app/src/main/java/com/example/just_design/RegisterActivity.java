@@ -18,16 +18,10 @@ public class RegisterActivity extends AppCompatActivity {
         myClickableText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onLogClick(v);
+                finish();
             }
         });
     }
 
-    // Metode yang akan dipanggil saat teks diklik
-    public void onLogClick(View view) {
-        // Tambahkan logika yang ingin Anda lakukan saat teks diklik di sini
-        // Misalnya, tampilkan pesan atau navigasi ke aktivitas lain
-        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-        startActivity(intent);
-    }
+
 }

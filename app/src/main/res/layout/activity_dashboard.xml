@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingBottom="20dp">
+
     <LinearLayout
         android:id="@+id/topPanel"
         android:layout_width="match_parent"
@@ -22,17 +23,6 @@
         android:layout_marginStart="40px"
         android:weightSum="1">
 
-<!--        <com.google.android.material.textview.MaterialTextView-->
-<!--            android:id="@+id/welcomeTitle"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="Hallo, Admin !"-->
-<!--            android:textAlignment="center"-->
-<!--            android:fontFamily="sans-serif-medium"-->
-<!--            android:textColor="@color/primaryText"-->
-<!--            android:textSize="28sp"-->
-<!--            android:textStyle="bold" />-->
 
         <TextView
             android:layout_width="wrap_content"
@@ -52,7 +42,7 @@
             android:fontFamily="@font/poppinsbold"
             android:text="Admin"
             android:textColor="@color/colorPrimary"
-            android:textSize="23sp"
+            android:textSize="20sp"
             android:textStyle="italic" />
 
 
@@ -80,9 +70,8 @@
 
             <ImageView
                 android:id="@+id/button_display_data"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:onClick="openInputDataActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:src="@drawable/ic_display_data" />
 
@@ -117,7 +106,7 @@
             android:focusableInTouchMode="true"
             >
             <LinearLayout
-
+                android:id="@+id/addNew"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/topPanel"
@@ -128,9 +117,8 @@
 
                 <ImageView
 
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:onClick="openInputDataActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
                     android:src="@drawable/ic_input_data" />
 
@@ -158,7 +146,7 @@
             android:focusableInTouchMode="true"
              >
         <LinearLayout
-
+            android:id="@+id/manipulate"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_below="@id/topPanel"
@@ -168,10 +156,8 @@
 
 
             <ImageView
-
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:onClick="openInputDataActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:src="@drawable/ic_manipulate_data" />
 
